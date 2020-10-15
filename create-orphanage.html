@@ -13,12 +13,15 @@
         
         <link rel="stylesheet" href="./public/css/main.css">
         <link rel="stylesheet" href="./public/css/animations.css">
+        <link rel="stylesheet" href="./public/css/sidebar.css">
+        <link rel="stylesheet" href="./public/css/map.css">
+        <link rel="stylesheet" href="./public/css/forms.css">
         <link rel="stylesheet" href="./public/css/page-create-orphanage.css">
         
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div id="create-orphanage">
+        <div id="page-create-orphanage">
 
             <aside class="animate-right sidebar">
                 
@@ -33,7 +36,53 @@
             </aside>
 
             <main class="animate-appear with-sidebar">
-                
+                <form action="">
+
+                    <fieldset>
+                        <legend>Dados</legend>
+
+                        <div class="map-container">
+                            <div id="mapid"></div>
+
+                            <footer>
+                                <a href="#" id="select-point">
+                                    Clique no mapa para adicionar a localização
+                                </a>
+                            </footer>
+                        </div>
+
+                        <div class="input-block">
+                            <label for="name">Nome</label>
+                            <input id="name" name="name">
+                        </div>
+                        
+                        <div class="input-block">
+                            <label for="about">Sobre <span>Máximo de 300 caracteres</span></label>
+                            <textarea id="about" name="about"></textarea>
+                        </div>
+
+                        <div class="input-block">
+                            <label for="whatsapp">Número de WhatsApp</label>
+                            <input id="whatsapp" name="whatsapp">
+                        </div>
+
+                        <div class="input-block images">
+                            <label for="whatsapp">Foto</label>
+
+                            <div class="images-upload" id="images">
+                                <input name="images">
+                            </div>
+                            <button type="button">
+                                <img src="./public/images/add-file.svg" alt="Adicionar foto">
+                            </button>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Visitação</legend>
+                    </fieldset>
+
+                </form>
             </main>
         </div>
 
