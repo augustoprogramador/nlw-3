@@ -92,6 +92,11 @@ function toggleSelect(event) {
     input.value = button.dataset.value
 }
 
-// //create and add marker
-// L.marker([-27.222633, -49.6455874], { icon }).addTo(map)
-//     .bindPopup(popup)
+function validate(event) {
+    // validar se lat e lng foram preenchidos
+    const needsLatAndLng = false
+    if (needsLatAndLng) {
+        event.preventDefault()
+        alert('Aponte o endereço do orfanato no mapa!')
+    }
+}
