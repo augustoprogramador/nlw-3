@@ -37,13 +37,27 @@
 
             <main class="animate-appear with-sidebar">
                 <div class="orphanage-details">
-                    <img src="{{orphanage.fistImage}}" alt="{{orphanage.name}}">
+                    {{!-- <img src="{{orphanage.firstImage}}" alt="{{orphanage.name}}"> --}}
+                    <img src="{{orphanage.images.[0]}}" alt="{{orphanage.name}}">
 
                     <div class="images">
                         {{#each orphanage.images }}
-                            <button onclick="selectImage(event)" class="active" type="button">
-                                <img src="{{this}}" alt="{{orphanage.name}}">
-                            </button>
+                            {{#if @first}}
+                                <button 
+                                    onclick="selectImage(event)" 
+                                    class="active" 
+                                    type="button"
+                                >
+                                    <img src="{{this}}" alt="{{orphanage.name}}">
+                                </button>
+                            {{else}}
+                                <button 
+                                    onclick="selectImage(event)" 
+                                    type="button"
+                                >
+                                    <img src="{{this}}" alt="{{orphanage.name}}">
+                                </button>
+                            {{/if}}
                         {{/each}}
                     </div>
 
