@@ -33,13 +33,27 @@
                     </button>
                 </footer>
 
+                <div id="escolhaTemas">
+                    <div class="preview1">
+                        <img src="" alt="">
+                    </div>
+                    <div class="preview2">
+                        <img src="" alt="">
+                    </div>
+                    <div class="preview3">
+                        <img src="" alt="">
+                    </div>
+                </div>
+
             </aside>
 
             <main class="animate-appear with-sidebar">
                 <div class="orphanage-details">
                     {{!-- <img src="{{orphanage.firstImage}}" alt="{{orphanage.name}}"> --}}
                     <img src="{{orphanage.images.[0]}}" alt="{{orphanage.name}}">
-
+                    <script>
+                        console.log(document)
+                    </script>
                     <div class="images">
                         {{#each orphanage.images }}
                             {{#if @first}}
