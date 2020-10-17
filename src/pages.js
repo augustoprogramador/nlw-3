@@ -19,12 +19,12 @@ module.exports = {
             orphanage.images = orphanage.images.split(",")
             orphanage.fistImage = orphanage.images[0]
 
-            // 
-            if (orphanage.open_on_weekends == "0") {
-                orphanage.open_on_weekends = false
-            } else {
-                orphanage.open_on_weekends = true
-            }
+            orphanage.open_on_weekends == 0 ? orphanage.open_on_weekends = false : true
+            // if (orphanage.open_on_weekends == "0") {
+            //     orphanage.open_on_weekends = false
+            // } else {
+            //     orphanage.open_on_weekends = true
+            // }
 
             return res.render('orphanage', { orphanage })
         } catch (error) {
