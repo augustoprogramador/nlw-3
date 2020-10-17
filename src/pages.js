@@ -17,7 +17,7 @@ module.exports = {
             const orphanage = results[0]
 
             orphanage.images = orphanage.images.split(",")
-            //orphanage.firstImage = orphanage.images[0]
+            orphanage.fistImage = orphanage.images[0]
 
             orphanage.open_on_weekends == 0 ? orphanage.open_on_weekends = false : true
             // if (orphanage.open_on_weekends == "0") {

@@ -1,4 +1,3 @@
-// tentar receber os campos do objeto por parâmetro
 function saveOrphanage(db, orphanage) {
     return db.run(`
         INSERT INTO orphanages (
