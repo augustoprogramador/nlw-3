@@ -33,32 +33,15 @@
                     </button>
                 </footer>
 
-                <div id="escolhaTemas">
-                    <div class="preview1">
-                        <img src="" alt="">
-                    </div>
-                    <div class="preview2">
-                        <img src="" alt="">
-                    </div>
-                    <div class="preview3">
-                        <img src="" alt="">
-                    </div>
-                </div>
-
             </aside>
 
             <main class="animate-appear with-sidebar">
                 <div class="orphanage-details">
-<<<<<<< HEAD
                     {{!-- <img src="{{orphanage.firstImage}}" alt="{{orphanage.name}}"> --}}
                     <img src="{{orphanage.images.[0]}}" alt="{{orphanage.name}}">
                     <script>
                         console.log(document)
                     </script>
-=======
-                    <img src="{{orphanage.fistImage}}" alt="{{orphanage.name}}">
-
->>>>>>> parent of 502af26... Adicionando a classe active apenas à primeira imagem
                     <div class="images">
                         {{#each orphanage.images }}
                             <button onclick="selectImage(event)" class="active" type="button">
